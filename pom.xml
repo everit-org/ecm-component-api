@@ -84,8 +84,8 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Export-Package>
-              org.everit.ecm.component,
-              org.everit.ecm.component.resource
+              org.everit.osgi.ecm.component,
+              org.everit.osgi.ecm.component.resource
             </Export-Package>
           </instructions>
         </configuration>
