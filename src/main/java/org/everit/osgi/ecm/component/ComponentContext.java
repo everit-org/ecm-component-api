@@ -70,6 +70,8 @@ public interface ComponentContext<C> {
 
     Map<String, Object> getProperties();
 
+    boolean isSatisfied();
+
     /**
      * Registers the specified service object with the specified properties under the name of the specified class with
      * the Framework.

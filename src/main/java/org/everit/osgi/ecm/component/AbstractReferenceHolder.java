@@ -46,4 +46,10 @@ public abstract class AbstractReferenceHolder<R> {
         return referenceId;
     }
 
+    @Override
+    public String toString() {
+        return "AbstractReferenceHolder [referenceId=" + referenceId + ", reference=" + reference + ", attributes="
+                + attributes + "]";
+    }
+
 }
