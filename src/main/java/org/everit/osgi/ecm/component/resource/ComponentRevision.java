@@ -16,7 +16,7 @@
  */
 package org.everit.osgi.ecm.component.resource;
 
-import java.util.Dictionary;
+import java.util.Map;
 
 import org.osgi.resource.Resource;
 
@@ -39,7 +39,7 @@ public interface ComponentRevision extends Resource {
      */
     Thread getProcessingThread();
 
-    Dictionary<String, ?> getProperties();
+    Map<String, Object> getProperties();
 
     ComponentState getState();
 }

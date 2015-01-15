@@ -17,7 +17,6 @@
 package org.everit.osgi.ecm.component;
 
 import java.util.Dictionary;
-import java.util.Map;
 
 import org.everit.osgi.ecm.component.resource.ComponentContainer;
 import org.everit.osgi.ecm.component.resource.ComponentRevision;
@@ -67,8 +66,6 @@ public interface ComponentContext<C> {
      *         {@link ComponentState#ACTIVE}.
      */
     C getInstance();
-
-    Map<String, Object> getProperties();
 
     boolean isSatisfied();
 

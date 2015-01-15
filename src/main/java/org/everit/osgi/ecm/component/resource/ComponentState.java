@@ -30,5 +30,7 @@ public enum ComponentState {
 
     STOPPING,
 
-    UNSATISFIED
+    UNSATISFIED,
+
+    UPDATING_CONFIGURATION
 }
