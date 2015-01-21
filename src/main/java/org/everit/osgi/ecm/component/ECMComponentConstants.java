@@ -20,6 +20,8 @@ public final class ECMComponentConstants {
 
     public static final String SERVICE_PROP_COMPONENT_CLASS = "ecm.component.class";
 
+    public static final String SERVICE_PROP_COMPONENT_NAME = "ecm.component.name";
+
     private ECMComponentConstants() {
     }
 }
