@@ -16,10 +16,9 @@
  */
 package org.everit.osgi.ecm.component.resource;
 
-import org.osgi.resource.Wiring;
+import org.osgi.framework.ServiceReference;
 
-public interface ComponentWiring extends Wiring {
+public interface ComponentServiceRequirement extends ComponentRequirement {
 
-    @Override
-    public ComponentRevision getResource();
+    ServiceReference<?> getServiceReference();
 }
