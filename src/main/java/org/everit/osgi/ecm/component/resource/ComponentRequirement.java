@@ -16,19 +16,15 @@
  */
 package org.everit.osgi.ecm.component.resource;
 
+import org.osgi.resource.Capability;
 import org.osgi.resource.Requirement;
 
-public interface ComponentRequirement extends Requirement {
+public interface ComponentRequirement<C extends Capability> extends Requirement {
 
-    /**
-     * Returns an active wire if there is one available.
-     * 
-     * @return An active wire if there is no active wire.
-     */
-    public ComponentWire getActiveWire();
-
-    String getComponentAttributeId();
+    String getRequirementId();
 
     @Override
-    public ComponentRevision getResource();
+    ComponentRevision getResource();
+
+    C[] getWiredCapabilities();
 }
