@@ -27,4 +27,6 @@ public interface ComponentRequirement<C extends Capability> extends Requirement 
     ComponentRevision getResource();
 
     C[] getWiredCapabilities();
+
+    boolean isSatisfied();
 }
