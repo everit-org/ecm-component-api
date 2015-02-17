@@ -21,6 +21,8 @@ import org.osgi.resource.Requirement;
 
 public interface ComponentRequirement<C extends Capability> extends Requirement {
 
+    Class<C> getAcceptedCapabilityType();
+
     String getRequirementId();
 
     @Override
