@@ -21,7 +21,6 @@ import java.util.Dictionary;
 import org.everit.osgi.ecm.component.resource.ComponentContainer;
 import org.everit.osgi.ecm.component.resource.ComponentRevision;
 import org.everit.osgi.ecm.component.resource.ComponentState;
-import org.everit.osgi.ecm.metadata.ComponentMetadata;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceEvent;
@@ -33,7 +32,7 @@ public interface ComponentContext<C> {
 
     BundleContext getBundleContext();
 
-    ComponentMetadata getComponentMetadata();
+    ComponentContainer<C> getComponentContainer();
 
     ComponentRevision getComponentRevision();
 

@@ -17,14 +17,17 @@
 package org.everit.osgi.ecm.component.resource;
 
 import org.everit.osgi.ecm.metadata.ComponentMetadata;
+import org.everit.osgi.linkage.ResourceContainer;
+import org.everit.osgi.linkage.WireContainer;
 import org.osgi.framework.BundleContext;
 
-public interface ComponentContainer<C> {
+public interface ComponentContainer<C> extends ResourceContainer, WireContainer {
 
-    ComponentRevision[] getComponentRevisions();
+    BundleContext getBundleContext();
 
     ComponentMetadata getComponentMetadata();
 
-    BundleContext getBundleContext();
+    @Override
+    ComponentRevision[] getResources();
 
 }
