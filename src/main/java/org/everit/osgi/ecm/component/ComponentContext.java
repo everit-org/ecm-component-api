@@ -34,7 +34,7 @@ public interface ComponentContext<C> {
 
     ComponentContainer<C> getComponentContainer();
 
-    ComponentRevision getComponentRevision();
+    ComponentRevision<C> getComponentRevision();
 
     /**
      * Get the service that was registered when the component was opened. The service reference can be used to log

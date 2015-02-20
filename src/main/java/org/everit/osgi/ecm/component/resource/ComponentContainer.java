@@ -28,6 +28,6 @@ public interface ComponentContainer<C> extends ResourceContainer, WireContainer 
     ComponentMetadata getComponentMetadata();
 
     @Override
-    ComponentRevision[] getResources();
+    ComponentRevision<C>[] getResources();
 
 }

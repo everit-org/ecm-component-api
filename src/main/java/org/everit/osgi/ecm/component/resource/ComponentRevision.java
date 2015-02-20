@@ -18,9 +18,9 @@ package org.everit.osgi.ecm.component.resource;
 
 import java.util.Map;
 
-import org.osgi.resource.Resource;
+import org.everit.osgi.linkage.ConfigurableResource;
 
-public interface ComponentRevision extends Resource {
+public interface ComponentRevision<C> extends ConfigurableResource {
 
     /**
      * The cause of the failure of the component.
@@ -28,6 +28,8 @@ public interface ComponentRevision extends Resource {
      * @return The cause of the failure or {@code null} if the component is not in {@link ComponentState#FAILED} state.
      */
     Throwable getCause();
+
+    ComponentContainer<C> getComponentContainer();
 
     /**
      * In case of {@link ComponentState#STARTING} or {@link ComponentState#STOPPING} state the method returns the thread
@@ -39,6 +41,7 @@ public interface ComponentRevision extends Resource {
      */
     Thread getProcessingThread();
 
+    @Override
     Map<String, Object> getProperties();
 
     ComponentState getState();
