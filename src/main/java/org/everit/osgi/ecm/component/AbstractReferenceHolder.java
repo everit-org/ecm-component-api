@@ -22,34 +22,36 @@ import java.util.Map;
 
 public abstract class AbstractReferenceHolder<R> {
 
-    private final Map<String, Object> attributes;
+  private final Map<String, Object> attributes;
 
-    private final R reference;
+  private final R reference;
 
-    private final String referenceId;
+  private final String referenceId;
 
-    public AbstractReferenceHolder(String referenceId, R reference, Map<String, Object> attributes) {
-        this.referenceId = referenceId;
-        this.reference = reference;
-        this.attributes = Collections.unmodifiableMap(new LinkedHashMap<String, Object>(attributes));
-    }
+  public AbstractReferenceHolder(final String referenceId, final R reference,
+      final Map<String, Object> attributes) {
+    this.referenceId = referenceId;
+    this.reference = reference;
+    this.attributes = Collections.unmodifiableMap(new LinkedHashMap<String, Object>(attributes));
+  }
 
-    protected Map<String, Object> getAttributes() {
-        return attributes;
-    }
+  public Map<String, Object> getAttributes() {
+    return attributes;
+  }
 
-    protected R getReference() {
-        return reference;
-    }
+  public R getReference() {
+    return reference;
+  }
 
-    protected String getReferenceId() {
-        return referenceId;
-    }
+  public String getReferenceId() {
+    return referenceId;
+  }
 
-    @Override
-    public String toString() {
-        return "AbstractReferenceHolder [referenceId=" + referenceId + ", reference=" + reference + ", attributes="
-                + attributes + "]";
-    }
+  @Override
+  public String toString() {
+    return "AbstractReferenceHolder [referenceId=" + referenceId + ", reference=" + reference
+        + ", attributes="
+        + attributes + "]";
+  }
 
 }

@@ -22,16 +22,17 @@ import org.osgi.framework.ServiceReference;
 
 public class ServiceHolder<S> extends AbstractReferenceHolder<ServiceReference<S>> {
 
-    private final S service;
+  private final S service;
 
-    public ServiceHolder(String referenceId, ServiceReference<S> reference, S service,
-            Map<String, Object> attributes) {
-        super(referenceId, reference, attributes);
-        this.service = service;
-    }
+  public ServiceHolder(final String referenceId, final ServiceReference<S> reference,
+      final S service,
+      final Map<String, Object> attributes) {
+    super(referenceId, reference, attributes);
+    this.service = service;
+  }
 
-    public S getService() {
-        return service;
-    }
+  public S getService() {
+    return service;
+  }
 
 }
