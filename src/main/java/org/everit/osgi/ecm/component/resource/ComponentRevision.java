@@ -1,18 +1,17 @@
-/**
- * This file is part of Everit - ECM Component API.
+/*
+ * Copyright (C) 2011 Everit Kft. (http://www.everit.org)
  *
- * Everit - ECM Component API is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * Everit - ECM Component API is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ *         http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Everit - ECM Component API.  If not, see <http://www.gnu.org/licenses/>.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package org.everit.osgi.ecm.component.resource;
 
@@ -20,29 +19,42 @@ import java.util.Map;
 
 import org.everit.osgi.linkage.ConfigurableResource;
 
+/**
+ * A snapshot of the state of a component instance.
+ *
+ * @param <C>
+ *          The type of the component instance.
+ */
 public interface ComponentRevision<C> extends ConfigurableResource {
 
-    /**
-     * The cause of the failure of the component.
-     *
-     * @return The cause of the failure or {@code null} if the component is not in {@link ComponentState#FAILED} state.
-     */
-    Throwable getCause();
+  /**
+   * The cause of the failure of the component.
+   *
+   * @return The cause of the failure or {@code null} if the component is not in
+   *         {@link ComponentState#FAILED} state.
+   */
+  Throwable getCause();
 
-    ComponentContainer<C> getComponentContainer();
+  ComponentContainer<C> getComponentContainer();
 
-    /**
-     * In case of {@link ComponentState#STARTING} or {@link ComponentState#STOPPING} state the method returns the thread
-     * that initiatied the state change on the component. This information can be useful if there is a long-running task
-     * or a deadlock during the state change.
-     *
-     * @return The thread that initiated {@link ComponentState#STARTING} or {@link ComponentState#STOPPING} or
-     *         {@code null} if the component has a different state.
-     */
-    Thread getProcessingThread();
+  /**
+   * In case of {@link ComponentState#STARTING} or {@link ComponentState#STOPPING} state the method
+   * returns the thread that initiatied the state change on the component. This information can be
+   * useful if there is a long-running task or a deadlock during the state change.
+   *
+   * @return The thread that initiated {@link ComponentState#STARTING} or
+   *         {@link ComponentState#STOPPING} or {@code null} if the component has a different state.
+   */
+  Thread getProcessingThread();
 
-    @Override
-    Map<String, Object> getProperties();
+  /**
+   * The configuration properties of the component.
+   */
+  @Override
+  Map<String, Object> getProperties();
 
-    ComponentState getState();
+  /**
+   * The state of the component.
+   */
+  ComponentState getState();
 }
