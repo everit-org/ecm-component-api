@@ -60,7 +60,9 @@ public enum ComponentState {
   UNSATISFIED,
 
   /**
-   * The component is currently in the process of upgrade with a new configuration.
+   * The component gets the UPDATE_CONFIGURATION state if the component has not been ACTIVE and new
+   * configuration arrived, or the component was active but it had to be stopped to apply
+   * non-dynamic changes.
    */
   UPDATING_CONFIGURATION
 }
