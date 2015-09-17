@@ -20,9 +20,6 @@ package org.everit.osgi.ecm.component;
  */
 public class ConfigurationException extends RuntimeException {
 
-  /**
-   * .
-   */
   private static final long serialVersionUID = -4309462973197228364L;
 
   public ConfigurationException(final String message) {
