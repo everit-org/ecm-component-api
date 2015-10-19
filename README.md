@@ -1,5 +1,5 @@
 ecm-component-api
 =================
 
-Classes that should be used by programmers who want to create and analyse
-ECM (Everit Component Model) based components.
+See documentation at http://everit.org/ecm/index.html
+See javadoc at http://everit.org/ecm-component-api/apidocs/index.html
