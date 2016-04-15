@@ -15,6 +15,8 @@
  */
 package org.everit.osgi.ecm.component;
 
+import javax.annotation.Generated;
+
 /**
  * The value of the attributes in {@link ComponentContext#getProperties()} have this type in case of
  * password attributes. The programmer should not set an instance of this class as an OSGi service
@@ -48,6 +50,7 @@ public class PasswordHolder implements Comparable<PasswordHolder> {
   }
 
   @Override
+  @Generated("eclipse")
   public boolean equals(final Object obj) {
     if (this == obj)
       return true;
@@ -69,6 +72,7 @@ public class PasswordHolder implements Comparable<PasswordHolder> {
   }
 
   @Override
+  @Generated("eclipse")
   public int hashCode() {
     final int prime = 31;
     int result = 1;
