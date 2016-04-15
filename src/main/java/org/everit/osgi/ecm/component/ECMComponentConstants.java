@@ -21,18 +21,24 @@ package org.everit.osgi.ecm.component;
 public final class ECMComponentConstants {
 
   /**
-   * Key for the service property that tells the implementation class of the component when the
-   * {@link org.everit.osgi.ecm.component.resource.ComponentContainer} is registered as an OSGi
-   * service.
+   * Service property of OSGi services registered by ECM Component instances. The value holds the
+   * service id of the Component Container that instantiated the Component instance.
    */
-  public static final String SERVICE_PROP_COMPONENT_CLASS = "org.everit.osgi.ecm.component.class";
+  public static final String SERVICE_PROP_COMPONENT_CONTAINER_SERVICE_ID =
+      "org.everit.osgi.ecm.component.container.service.id";
 
   /**
-   * Key for the component ID service property. The property stores the ID of the component that
-   * registered the service.
+   * Property that is set for the registered ComponentContainer / ManagedService /
+   * ManagedServiceFactory OSGi service. The type of the service property is String.
    */
-  public static final String SERVICE_PROP_COMPONENT_ID =
-      "org.everit.osgi.ecm.component.id";
+  public static final String SERVICE_PROP_COMPONENT_ID = "org.everit.osgi.ecm.component.id";
+
+  /**
+   * Property that is set for the registered ComponentContainer / ManagedService /
+   * ManagedServiceFactory OSGi service. The type of the service property is Version.
+   */
+  public static final String SERVICE_PROP_COMPONENT_VERSION =
+      "org.everit.osgi.ecm.component.version";
 
   private ECMComponentConstants() {
   }
