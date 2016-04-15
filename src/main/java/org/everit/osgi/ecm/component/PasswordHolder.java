@@ -4,6 +4,7 @@ package org.everit.osgi.ecm.component;
  * The value of the attributes in {@link ComponentContext#getProperties()} have this type in case of
  * password attributes. The programmer should not set an instance of this class as an OSGi service
  * property but a String with a dummy value should be used instead (e.g.: with five stars in it).
+ * The parameter setter method of such attribute may have this type or a String type.
  */
 public class PasswordHolder implements Comparable<PasswordHolder> {
 
