@@ -29,13 +29,15 @@ public final class ECMComponentConstants {
 
   /**
    * Property that is set for the registered ComponentContainer / ManagedService /
-   * ManagedServiceFactory OSGi service. The type of the service property is String.
+   * ManagedServiceFactory OSGi service and for the OSGi services that are registered by components.
+   * The type of the service property is String.
    */
   public static final String SERVICE_PROP_COMPONENT_ID = "org.everit.osgi.ecm.component.id";
 
   /**
    * Property that is set for the registered ComponentContainer / ManagedService /
-   * ManagedServiceFactory OSGi service. The type of the service property is Version.
+   * ManagedServiceFactory OSGi service and for the OSGi services that are registered by components.
+   * The type of the service property is Version.
    */
   public static final String SERVICE_PROP_COMPONENT_VERSION =
       "org.everit.osgi.ecm.component.version";
